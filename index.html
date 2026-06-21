@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevDelta — Онлайн курсы программирования</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-left">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <span class="logo-text">DevDelta</span>
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav-link active">ГЛАВНАЯ</a>
+                <a href="filters.html" class="nav-link">ФИЛЬТРЫ</a>
+            </nav>
+        </div>
+        <div class="header-center">
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="НАЙТИ КУРС">
+            </div>
+        </div>
+        <div class="header-right">
+            <a href="auth.html" class="btn btn-outline">ВХОД</a>
+            <a href="auth.html?mode=register" class="btn btn-outline">РЕГИСТРАЦИЯ</a>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <div class="hero-title-text">НАЧНИ СЕГОДНЯ</div>
+            <a href="course.html" class="btn btn-black btn-large">ПОДРОБНЕЕ</a>
+        </div>
+    </section>
+
+    <!-- POPULAR COURSES -->
+<section class="section" id="courses">
+    <h2 class="section-title">Популярные курсы</h2>
+    <div class="courses-grid">
+        <!-- Python -->
+        <div class="course-card" data-category="python" data-price="89.99">
+            <div class="course-image">
+                <div class="python-diagram">
+                    <div class="python-logo">🐍</div>
+                </div>
+            </div>
+            <div class="course-info">
+                <h3 class="course-title">Python с нуля</h3>
+                <p class="course-desc">Курс преподаст базовые знания Python</p>
+            </div>
+            <div class="course-footer">
+                <span class="course-price">89.99$</span>
+                <a href="course.html?course=python" class="btn btn-primary">Купить</a>
+            </div>
+        </div>
+
+        <!-- JavaScript -->
+        <div class="course-card" data-category="javascript" data-price="99.99">
+            <div class="course-image">
+                <div class="python-diagram">
+                    <div class="python-logo" style="color: #f7df1e;">JS</div>
+                </div>
+            </div>
+            <div class="course-info">
+                <h3 class="course-title">JavaScript Basic</h3>
+                <p class="course-desc">Основы JavaScript для начинающих</p>
+            </div>
+            <div class="course-footer">
+                <span class="course-price">99.99$</span>
+                <a href="course.html?course=javascript" class="btn btn-primary">Купить</a>
+            </div>
+        </div>
+
+        <!-- Web Development -->
+        <div class="course-card" data-category="web" data-price="119.99">
+            <div class="course-image">
+                <div class="python-diagram">
+                    <div class="python-logo" style="color: #61dafb;">WEB</div>
+                </div>
+            </div>
+            <div class="course-info">
+                <h3 class="course-title">Веб-разработка</h3>
+                <p class="course-desc">Fullstack разработка с нуля</p>
+            </div>
+            <div class="course-footer">
+                <span class="course-price">119.99$</span>
+                <a href="course.html?course=web" class="btn btn-primary">Купить</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- ACTUAL COURSES -->
+<section class="section">
+    <h2 class="section-title">Актуальные курсы</h2>
+    <div class="courses-grid">
+        <!-- Mobile -->
+        <div class="course-card" data-category="mobile" data-price="109.99">
+            <div class="course-image">
+                <div class="python-diagram">
+                    <div class="python-logo" style="color: #007aff;">APP</div>
+                </div>
+            </div>
+            <div class="course-info">
+                <h3 class="course-title">Mobile Apps</h3>
+                <p class="course-desc">Разработка мобильных приложений</p>
+            </div>
+            <div class="course-footer">
+                <span class="course-price">109.99$</span>
+                <a href="course.html?course=mobile" class="btn btn-primary">Купить</a>
+            </div>
+        </div>
+
+        <!-- Data Science -->
+        <div class="course-card" data-category="data" data-price="129.99">
+            <div class="course-image">
+                <div class="python-diagram">
+                    <div class="python-logo" style="color: #ff6b6b;">DATA</div>
+                </div>
+            </div>
+            <div class="course-info">
+                <h3 class="course-title">Data Science</h3>
+                <p class="course-desc">Анализ данных и машинное обучение</p>
+            </div>
+            <div class="course-footer">
+                <span class="course-price">129.99$</span>
+                <a href="course.html?course=data" class="btn btn-primary">Купить</a>
+            </div>
+        </div>
+
+        <!-- Python Advanced -->
+        <div class="course-card" data-category="python" data-price="89.99">
+            <div class="course-image">
+                <div class="python-diagram">
+                    <div class="python-logo">🐍</div>
+                </div>
+            </div>
+            <div class="course-info">
+                <h3 class="course-title">Python Advanced</h3>
+                <p class="course-desc">Продвинутый Python для разработчиков</p>
+            </div>
+            <div class="course-footer">
+                <span class="course-price">89.99$</span>
+                <a href="course.html?course=python-advanced" class="btn btn-primary">Купить</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-left">
+            <button class="btn btn-primary" onclick="openModal('question')">ЗАДАТЬ ВОПРОС</button>
+            <button class="btn btn-primary" onclick="openModal('chat')">ТЕХ. ПОДДЕРЖКА</button>
+        </div>
+        <div class="footer-center">
+            <p class="footer-company">ООО "ДельтаДев"</p>
+            <p class="footer-owner">Владелец: Тарибо Даниэль Сергеевич</p>
+        </div>
+        <div class="footer-right">
+            <div class="footer-contact">
+                <i class="fas fa-phone"></i>
+                <span>+375 29 681-67-42</span>
+            </div>
+            <div class="footer-contact">
+                <i class="fas fa-envelope"></i>
+                <span>deltadev@gmail.com</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODALS -->
+    <div class="modal-overlay" id="modalOverlay">
+        <!-- Question Form Modal -->
+        <div class="modal" id="questionModal">
+            <div class="modal-header">
+                <h3>ФОРМА</h3>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <p class="modal-subtitle">У вас есть вопросы? Заполните форму для обратной связи!</p>
+            <form class="modal-form">
+                <input type="text" placeholder="Имя" class="form-input">
+                <input type="email" placeholder="Эл. почта" class="form-input">
+                <textarea placeholder="Ваш вопрос..." class="form-textarea"></textarea>
+                <label class="checkbox-label">
+                    <input type="checkbox">
+                    <span>Я соглашаюсь с обработкой персональных данных</span>
+                </label>
+                <button type="submit" class="btn btn-primary modal-submit">ЗАДАТЬ ВОПРОС</button>
+            </form>
+        </div>
+        
+
+        <!-- Chat Modal -->
+        <div class="modal" id="chatModal">
+            <div class="modal-header">
+                <h3>ЧАТ</h3>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="chat-messages" id="chatMessages"></div>
+            <div class="chat-attachment-preview" id="attachmentPreview" style="display: none;">
+                <img id="attachmentImage" src="" alt="preview">
+                <button class="attachment-remove" onclick="removeAttachment()">&times;</button>
+            </div>
+            <div class="chat-input-area">
+                <input type="file" id="fileInput" accept="image/*" style="display: none;" onchange="handleFileSelect(event)">
+                <button class="chat-attach-btn" onclick="document.getElementById('fileInput').click()" title="Прикрепить изображение">
+                    <i class="fas fa-paperclip"></i>
+                </button>
+                <input type="text" placeholder="Введите сообщение..." class="chat-input" id="chatInput">
+                <button class="chat-send-btn" onclick="sendMessage()" title="Отправить">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

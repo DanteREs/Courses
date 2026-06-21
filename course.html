@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevDelta — Курс</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-left">
+            <div class="logo">
+                <div class="logo-icon"><i class="fas fa-code"></i></div>
+                <span class="logo-text">DevDelta</span>
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">ГЛАВНАЯ</a>
+                <a href="filters.html" class="nav-link">ФИЛЬТРЫ</a>
+            </nav>
+        </div>
+        <div class="header-center">
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="НАЙТИ КУРС">
+            </div>
+        </div>
+        <div class="header-right">
+            <a href="auth.html" class="btn btn-outline">ВХОД</a>
+            <a href="auth.html?mode=register" class="btn btn-outline">РЕГИСТРАЦИЯ</a>
+        </div>
+    </header>
+
+    <!-- COURSE HERO -->
+    <section class="course-hero">
+        <div class="course-hero-bg"></div>
+        <div class="course-hero-content">
+            <h1 class="course-hero-title" id="courseHeroTitle">Python с нуля</h1>
+            <p class="course-hero-desc" id="courseHeroDesc">Обучение самым основным понятиям в Python разработке</p>
+            <div class="course-rating">
+                <i class="fas fa-star"></i>
+                <span class="rating-value" id="courseRating">4,6</span>
+                <span class="rating-badge">Лидер продаж</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- BREADCRUMBS -->
+    <div class="breadcrumbs">
+        <a href="index.html">Главная</a> &lt; <a href="filters.html">Фильтры</a> &lt; <span id="breadcrumbCourse">"Для начинающих"</span>
+    </div>
+
+    <!-- COURSE CONTENT -->
+    <section class="course-layout">
+        <div class="course-main">
+            <div class="course-learn">
+                <h3>Чему научитесь:</h3>
+                <ul id="courseLearnList">
+                    <li>Создавать и работать с переменными</li>
+                    <li>Использовать базовые команды</li>
+                    <li>Использовать условные конструкции</li>
+                    <li>Использовать циклы</li>
+                    <li>Создавать и использовать такие структуры как: циклы, словари, кортежи и т.д.</li>
+                    <li>Понимание базовых парадигм ООП</li>
+                    <li>и т.д</li>
+                </ul>
+            </div>
+
+            <div class="course-description">
+                <h3>Описание курса:</h3>
+                <p id="courseDescription">Курс преподаст базовые знания в языке программирования Python. Умения студента, успешно прошедшего курс будет соответствовать умениям Junior разработчика.</p>
+            </div>
+
+            <!-- MATERIALS -->
+            <div class="course-materials">
+                <h3>Материалы курса</h3>
+                <div class="materials-list" id="materialsList">
+                    <div class="material-item locked">
+                        <span>Материал №1</span>
+                        <span class="material-duration">25:24</span>
+                    </div>
+                    <div class="material-item locked">
+                        <span>Материал №2</span>
+                        <span class="material-duration">15:24</span>
+                    </div>
+                    <div class="material-item locked">
+                        <span>Материал №3</span>
+                        <span class="material-duration">32:12</span>
+                    </div>
+                    <div class="material-item locked">
+                        <span>Материал №4</span>
+                        <span class="material-duration">21:32</span>
+                    </div>
+                    <div class="material-item locked">
+                        <span>Материал №5</span>
+                        <span class="material-duration">67:42</span>
+                    </div>
+                    <div class="material-item locked">
+                        <span>Материал №6</span>
+                        <span class="material-duration">11:11</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- REVIEWS -->
+            <div class="course-reviews">
+                <div class="reviews-header">
+                    <h3>Отзывы</h3>
+                    <button class="btn btn-primary" onclick="addReview()">Добавить</button>
+                </div>
+                <div class="reviews-grid">
+                    <div class="review-card">
+                        <div class="review-author">
+                            <div class="review-avatar"><i class="fas fa-user"></i></div>
+                            <span>AutoTrack</span>
+                        </div>
+                        <p class="review-text">Курс прост полезен и понятен!</p>
+                        <div class="review-actions">
+                            <span>Это было полезно?</span>
+                            <button class="review-btn like" onclick="toggleReviewLike(this)"><i class="fas fa-check"></i></button>
+                            <button class="review-btn dislike" onclick="toggleReviewDislike(this)"><i class="fas fa-times"></i></button>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-author">
+                            <div class="review-avatar"><i class="fas fa-user"></i></div>
+                            <span>AutoTrack</span>
+                        </div>
+                        <p class="review-text">Курс прост полезен и понятен!</p>
+                        <div class="review-actions">
+                            <span>Это было полезно?</span>
+                            <button class="review-btn like" onclick="toggleReviewLike(this)"><i class="fas fa-check"></i></button>
+                            <button class="review-btn dislike" onclick="toggleReviewDislike(this)"><i class="fas fa-times"></i></button>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-author">
+                            <div class="review-avatar"><i class="fas fa-user"></i></div>
+                            <span>AutoTrack</span>
+                        </div>
+                        <p class="review-text">Курс прост полезен и понятен!</p>
+                        <div class="review-actions">
+                            <span>Это было полезно?</span>
+                            <button class="review-btn like" onclick="toggleReviewLike(this)"><i class="fas fa-check"></i></button>
+                            <button class="review-btn dislike" onclick="toggleReviewDislike(this)"><i class="fas fa-times"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SIDEBAR -->
+        <aside class="course-sidebar">
+            <div class="sidebar-card">
+                <div class="sidebar-image">
+                    <div class="python-diagram small" id="sidebarDiagram">
+                        <div class="node node-int">INTS</div>
+                        <div class="node node-float">floats</div>
+                        <div class="node node-str">strings</div>
+                        <div class="node node-list">Lists</div>
+                        <div class="python-logo" id="sidebarLogo">🐍</div>
+                    </div>
+                </div>
+                <h3 class="sidebar-course-title" id="sidebarCourseTitle">Python с нуля</h3>
+                <div class="sidebar-price" id="sidebarPrice">89.99$</div>
+                <button class="btn btn-primary btn-full" id="buyBtn" onclick="buyCourse()">КУПИТЬ</button>
+                <div class="sidebar-features">
+                    <h4>В этом курсе:</h4>
+                    <ul id="sidebarFeatures">
+                        <li>Понятные и простые формулировки</li>
+                        <li>Не требуются знания языка</li>
+                        <li>Интуитивно понятная программ</li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-left">
+            <button class="btn btn-primary" onclick="openModal('question')">ЗАДАТЬ ВОПРОС</button>
+            <button class="btn btn-primary" onclick="openModal('chat')">ТЕХ. ПОДДЕРЖКА</button>
+        </div>
+        <div class="footer-center">
+            <p class="footer-company">ООО "ДельтаДев"</p>
+            <p class="footer-owner">Владелец: Тарибо Даниэль Сергеевич</p>
+        </div>
+        <div class="footer-right">
+            <div class="footer-contact">
+                <i class="fas fa-phone"></i>
+                <span>+375 29 681-67-42</span>
+            </div>
+            <div class="footer-contact">
+                <i class="fas fa-envelope"></i>
+                <span>deltadev@gmail.com</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODALS -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal" id="questionModal">
+            <div class="modal-header">
+                <h3>ФОРМА</h3>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <p class="modal-subtitle">У вас есть вопросы? Заполните форму для обратной связи!</p>
+            <form class="modal-form">
+                <input type="text" placeholder="Имя" class="form-input">
+                <input type="email" placeholder="Эл. почта" class="form-input">
+                <textarea placeholder="Ваш вопрос..." class="form-textarea"></textarea>
+                <label class="checkbox-label">
+                    <input type="checkbox">
+                    <span>Я соглашаюсь с обработкой персональных данных</span>
+                </label>
+                <button type="submit" class="btn btn-primary modal-submit">ЗАДАТЬ ВОПРОС</button>
+            </form>
+        </div>
+        <div class="modal" id="chatModal">
+            <div class="modal-header">
+                <h3>ЧАТ</h3>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="chat-messages" id="chatMessages"></div>
+            <div class="chat-attachment-preview" id="attachmentPreview" style="display: none;">
+                <img id="attachmentImage" src="" alt="preview">
+                <button class="attachment-remove" onclick="removeAttachment()">&times;</button>
+            </div>
+            <div class="chat-input-area">
+                <input type="file" id="fileInput" accept="image/*" style="display: none;" onchange="handleFileSelect(event)">
+                <button class="chat-attach-btn" onclick="document.getElementById('fileInput').click()" title="Прикрепить изображение">
+                    <i class="fas fa-paperclip"></i>
+                </button>
+                <input type="text" placeholder="Введите сообщение..." class="chat-input" id="chatInput">
+                <button class="chat-send-btn" onclick="sendMessage()" title="Отправить">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="course-data.js"></script>
+</body>
+</html>

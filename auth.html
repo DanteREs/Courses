@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизация — DevDelta</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-left">
+            <div class="logo">
+                <div class="logo-icon"><i class="fas fa-code"></i></div>
+                <span class="logo-text">DevDelta</span>
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">ГЛАВНАЯ</a>
+                <a href="filters.html" class="nav-link">ФИЛЬТРЫ</a>
+            </nav>
+        </div>
+        <div class="header-center">
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="НАЙТИ КУРС">
+            </div>
+        </div>
+        <div class="header-right">
+            <a href="auth.html" class="btn btn-outline active">ВХОД</a>
+            <a href="auth.html?mode=register" class="btn btn-outline">РЕГИСТРАЦИЯ</a>
+        </div>
+    </header>
+
+    <!-- BREADCRUMBS -->
+    <div class="breadcrumbs">
+        <a href="index.html">Главная</a> &lt; <span id="breadcrumbMode">Вход</span> &lt;
+    </div>
+
+    <!-- AUTH SECTION -->
+    <section class="auth-section">
+        <h1 class="auth-title" id="authTitle">РЕГИСТРАЦИЯ</h1>
+
+        <div class="auth-form-container">
+            <!-- REGISTER FORM -->
+            <form class="auth-form" id="registerForm">
+                <input type="text" placeholder="Полное Имя" class="auth-input">
+                <input type="email" placeholder="Эл. Почта" class="auth-input">
+                <input type="password" placeholder="Пароль" class="auth-input">
+                <input type="password" placeholder="Повторить пароль" class="auth-input">
+
+                <button type="button" class="btn btn-primary btn-full auth-submit-btn" id="authSubmitBtn">Зарегистрироваться</button>
+
+                <div class="auth-divider">
+                    <span>Войти через</span>
+                </div>
+
+                <div class="social-login">
+                    <button type="button" class="social-btn google"><i class="fab fa-google"></i></button>
+                    <button type="button" class="social-btn apple"><i class="fab fa-apple"></i></button>
+                    <button type="button" class="social-btn facebook"><i class="fab fa-facebook-f"></i></button>
+                    <button type="button" class="social-btn github"><i class="fab fa-github"></i></button>
+                </div>
+
+                <p class="auth-switch">
+                    Уже есть аккаунт? <a href="auth.html" id="switchToLogin">Войти</a>
+                </p>
+            </form>
+
+            <!-- LOGIN FORM (hidden by default) -->
+            <form class="auth-form" id="loginForm" style="display: none;">
+                <input type="email" placeholder="Эл. Почта" class="auth-input">
+                <input type="password" placeholder="Пароль" class="auth-input">
+
+                <button type="button" class="btn btn-primary btn-full auth-submit-btn">Войти</button>
+
+                <div class="auth-divider">
+                    <span>Войти через</span>
+                </div>
+
+                <div class="social-login">
+                    <button type="button" class="social-btn google"><i class="fab fa-google"></i></button>
+                    <button type="button" class="social-btn apple"><i class="fab fa-apple"></i></button>
+                    <button type="button" class="social-btn facebook"><i class="fab fa-facebook-f"></i></button>
+                    <button type="button" class="social-btn github"><i class="fab fa-github"></i></button>
+                </div>
+
+                <p class="auth-switch">
+                    Нет аккаунта? <a href="auth.html?mode=register" id="switchToRegister">Зарегистрироваться</a>
+                </p>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-left">
+            <button class="btn btn-primary" onclick="openModal('question')">ЗАДАТЬ ВОПРОС</button>
+            <button class="btn btn-primary" onclick="openModal('chat')">ТЕХ. ПОДДЕРЖКА</button>
+        </div>
+        <div class="footer-center">
+            <p class="footer-company">ООО "ДельтаДев"</p>
+            <p class="footer-owner">Владелец: Тарибо Даниэль Сергеевич</p>
+        </div>
+        <div class="footer-right">
+            <div class="footer-contact">
+                <i class="fas fa-phone"></i>
+                <span>+375 29 681-67-42</span>
+            </div>
+            <div class="footer-contact">
+                <i class="fas fa-envelope"></i>
+                <span>deltadev@gmail.com</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODALS -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal" id="questionModal">
+            <div class="modal-header">
+                <h3>ФОРМА</h3>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <p class="modal-subtitle">У вас есть вопросы? Заполните форму для обратной связи!</p>
+            <form class="modal-form">
+                <input type="text" placeholder="Имя" class="form-input">
+                <input type="email" placeholder="Эл. почта" class="form-input">
+                <textarea placeholder="Ваш вопрос..." class="form-textarea"></textarea>
+                <label class="checkbox-label">
+                    <input type="checkbox">
+                    <span>Я соглашаюсь с обработкой персональных данных</span>
+                </label>
+                <button type="submit" class="btn btn-primary modal-submit">ЗАДАТЬ ВОПРОС</button>
+            </form>
+        </div>
+        <div class="modal" id="chatModal">
+            <div class="modal-header">
+                <h3>ЧАТ</h3>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="chat-messages" id="chatMessages"></div>
+            <div class="chat-attachment-preview" id="attachmentPreview" style="display: none;">
+                <img id="attachmentImage" src="" alt="preview">
+                <button class="attachment-remove" onclick="removeAttachment()">&times;</button>
+            </div>
+            <div class="chat-input-area">
+                <input type="file" id="fileInput" accept="image/*" style="display: none;" onchange="handleFileSelect(event)">
+                <button class="chat-attach-btn" onclick="document.getElementById('fileInput').click()" title="Прикрепить изображение">
+                    <i class="fas fa-paperclip"></i>
+                </button>
+                <input type="text" placeholder="Введите сообщение..." class="chat-input" id="chatInput">
+                <button class="chat-send-btn" onclick="sendMessage()" title="Отправить">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const params = new URLSearchParams(window.location.search);
+            const mode = params.get('mode');
+            const title = document.getElementById('authTitle');
+            const registerForm = document.getElementById('registerForm');
+            const loginForm = document.getElementById('loginForm');
+            const breadcrumbMode = document.getElementById('breadcrumbMode');
+            const submitBtn = document.getElementById('authSubmitBtn');
+
+            if (mode === 'register') {
+                title.textContent = 'РЕГИСТРАЦИЯ';
+                registerForm.style.display = 'block';
+                loginForm.style.display = 'none';
+                breadcrumbMode.textContent = 'Регистрация';
+                submitBtn.textContent = 'Зарегистрироваться';
+            } else {
+                title.textContent = 'ВХОД';
+                registerForm.style.display = 'none';
+                loginForm.style.display = 'block';
+                breadcrumbMode.textContent = 'Вход';
+            }
+        });
+    </script>
+</body>
+</html>
